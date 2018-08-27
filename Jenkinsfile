@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh 'mvn -B -DskipTests clean package' 
+                sh 'mvn -B -DskipTests clean package deploy' 
                 sh 'echo Branch Name: $BRANCH_NAME'
         }
     		post {
