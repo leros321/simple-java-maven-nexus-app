@@ -6,7 +6,7 @@ pipeline {
 				sh 'mvn -B -DskipTests clean package'
 				sh "COMMIT=${env.GIT_COMMIT}"
 			script {
-                    currentBuild.displayName = "#${env.BUILD_NUMBER}_${env.BRANCH_NAME}"
+                    currentBuild.displayName = "#${env.BUILD_NUMBER}_${env.GIT_BRANCH}"
                     currentBuild.description = "The best description."
                 }
 
