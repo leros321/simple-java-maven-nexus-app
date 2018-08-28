@@ -4,6 +4,7 @@ pipeline {
 		stage('Build') {
 			steps {
 				sh 'mvn -B -DskipTests clean package'
+				sh "echo ${env.GIT_COMMIT}"
 			}
 			post {
 				success{
