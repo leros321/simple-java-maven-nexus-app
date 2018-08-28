@@ -5,7 +5,7 @@ pipeline {
 			steps {
 				sh 'mvn -B -DskipTests clean package'
 			script {
-			VERSION = sh(script: "./jenkins/scripts/version_export.sh", returnStdout: true).trim()
+			VERSION = sh(script: "$(mvn help:evaluate -Dexpression=project.version | egrep "^[^\\[]")", returnStdout: true).trim()
 			echo "** version: ${VERSION} **"
                     currentBuild.displayName = "#${env.BUILD_NUMBER}_${VERSION}"
                     currentBuild.description = "The best description."
