@@ -6,7 +6,7 @@ pipeline {
 				sh 'mvn -B -DskipTests clean package'
 				sh 'VERSION=$(mvn help:evaluate -Dexpression=project.version | egrep "^[^\\[]")'
 			script {
-                    currentBuild.displayName = "#${env.BUILD_NUMBER}_${env.VERSION}"
+                    currentBuild.displayName = "#${env.BUILD_NUMBER}_${VERSION}"
                     currentBuild.description = "The best description."
                 }
 
