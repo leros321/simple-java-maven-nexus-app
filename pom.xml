@@ -15,25 +15,6 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-<profile>
-  <id>sonar</id>
-  <properties>
-    <sonar.host.url>https://gdi-wbench.psst.t-online.corp/sonar</sonar.host.url>
-    <sonar.organization>workbench-test</sonar.organization>
-  </properties>
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.jacoco</groupId>
-        <artifactId>jacoco-maven-plugin</artifactId>
-      </plugin>
-      <plugin>
-        <groupId>org.sonarsource.scanner.maven</groupId>
-        <artifactId>sonar-maven-plugin</artifactId>
-      </plugin>
-    </plugins>
-  </build>
-</profile>
   <build>
     <plugins>
       <plugin>
