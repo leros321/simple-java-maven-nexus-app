@@ -76,18 +76,6 @@
     </plugin>
     </plugins>
   </build>
-  <distributionManagement>
-        <repository>
-            <id>deployment</id>
-            <name>Internal Releases</name>
-            <url>http://172.27.9.25:8081/repository/siimple-maven-releases/</url>
-        </repository>
-        <snapshotRepository>
-            <id>deployment</id>
-            <name>Internal Snapshot Releases</name>
-            <url>http://172.27.9.25:8081/repository/simple-maven-snapshots/</url>
-        </snapshotRepository>
-    </distributionManagement>
   <reporting>
     <plugins>
       <plugin>
