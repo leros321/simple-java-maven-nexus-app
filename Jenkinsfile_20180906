@@ -21,6 +21,7 @@ pipeline {
                 stage('Test') {
                         steps {
                                 sh 'mvn test surefire-report:report'
+				sh 'mvn clean verify -P sonar -Dsonar.login=b498f2c253c15e99cdffcf2691fd11522045b4dd'
                         }
                         post {
                                 always {
